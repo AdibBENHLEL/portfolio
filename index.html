@@ -97,8 +97,8 @@
         <h1 class="hero-title">
           <span class="white">I'm </span><span class="cyan">ADIB<br>BEN HELAL</span>
         </h1>
-        <p class="hero-sub">Software Engineer / Full-Stack Developer</p>
-        <p class="hero-desc">Building fast, modern web applications and data-driven systems.</p>
+        <p class="hero-sub">Data Scientist / Software Engineer</p>
+        <p class="hero-desc">Building fast, modern web / mobile applications and data-driven systems.</p>
         <div class="hero-btns">
           <a href="#projects" class="btn-primary">VIEW_PROJECTS</a>
           <a href="#contact" class="btn-secondary">GET_IN_TOUCH</a>
@@ -132,7 +132,7 @@
       </div>
       <div class="about-text">
         <h3>WHO AM I?</h3>
-        <p>I'm a Software Engineer based in Tunisia, passionate about building elegant solutions to complex problems. I work across the full stack — from crafting responsive UIs to designing scalable backend architectures and data pipelines.</p>
+        <p>I'm a Data Scientist / Software Engineer based in Tunisia, passionate about building elegant solutions to complex problems. I work across the full stack — from crafting responsive UIs to designing scalable backend architectures and data pipelines.</p>
         <p>With experience spanning web development, data engineering, AI/ML, and mobile apps, I bring versatility and a sharp attention to detail to every project I touch.</p>
         <div class="about-stats">
           <div class="stat-box"><div class="stat-num">40+</div><div class="stat-label">TECHNOLOGIES</div></div>
@@ -172,14 +172,91 @@
       <h2 class="sec-title">PROJECTS</h2>
       <div class="sec-line"></div>
     </div>
-    <div class="projects-grid">
-      <div class="project-card"><div class="proj-num">PROJECT_01</div><div class="proj-name">AI Vision Detection</div><div class="proj-desc">Real-time object detection system using YOLOv8 with custom training pipeline and live video stream processing.</div><div class="proj-tech"><span>YOLOv8</span><span>Python</span><span>OpenCV</span><span>TensorFlow</span></div><div class="proj-links"><a href="#" class="proj-link">GitHub</a><a href="#" class="proj-link">Live Demo</a></div></div>
-      <div class="project-card"><div class="proj-num">PROJECT_02</div><div class="proj-name">Data Pipeline System</div><div class="proj-desc">End-to-end ETL pipeline with Kafka streaming, Spark batch processing, and PostgreSQL data warehouse integration.</div><div class="proj-tech"><span>Kafka</span><span>Spark</span><span>PostgreSQL</span><span>Docker</span></div><div class="proj-links"><a href="#" class="proj-link">GitHub</a></div></div>
-      <div class="project-card"><div class="proj-num">PROJECT_03</div><div class="proj-name">Full-Stack Web App</div><div class="proj-desc">Modern MERN stack application with RESTful API, JWT authentication, and responsive Material-UI frontend.</div><div class="proj-tech"><span>React</span><span>Node.js</span><span>MongoDB</span><span>Material-UI</span></div><div class="proj-links"><a href="#" class="proj-link">GitHub</a><a href="#" class="proj-link">Live Demo</a></div></div>
-      <div class="project-card"><div class="proj-num">PROJECT_04</div><div class="proj-name">NLP Text Classifier</div><div class="proj-desc">Natural language processing pipeline for text classification with custom model training and Flask API deployment.</div><div class="proj-tech"><span>Python</span><span>NLP</span><span>Flask</span><span>Pandas</span></div><div class="proj-links"><a href="#" class="proj-link">GitHub</a></div></div>
-      <div class="project-card"><div class="proj-num">PROJECT_05</div><div class="proj-name">Android Mobile App</div><div class="proj-desc">Native Android application with Java, featuring real-time database sync, push notifications, and offline-first architecture.</div><div class="proj-tech"><span>Java</span><span>Android Studio</span><span>MySQL</span></div><div class="proj-links"><a href="#" class="proj-link">GitHub</a></div></div>
-      <div class="project-card"><div class="proj-num">PROJECT_06</div><div class="proj-name">BI Dashboard</div><div class="proj-desc">Interactive BI dashboard with D3.js visualizations, Power BI integration, and automated reporting.</div><div class="proj-tech"><span>D3.js</span><span>Power BI</span><span>Python</span><span>SQL Server</span></div><div class="proj-links"><a href="#" class="proj-link">GitHub</a></div></div>
+   <div class="projects-grid">
+
+  <div class="project-card">
+    <div class="proj-num">PROJECT_01</div>
+    <div class="proj-name">Hydrolytics — Water Resource Pipeline</div>
+    <div class="proj-desc">End-to-end data engineering pipeline for smart agricultural irrigation. Real-time IoT streaming via Kafka, batch ingestion from Open-Meteo & NASA APIs, ETL with n8n, evapotranspiration scoring, and live Streamlit dashboard. Fully dockerized.</div>
+    <div class="proj-tech"><span>Kafka</span><span>PostgreSQL</span><span>Docker</span><span>n8n</span><span>Streamlit</span><span>Python</span></div>
+    <div class="proj-links">
+      <a href="https://github.com/AdibBENHLEL/Hydrolytics" target="_blank" class="proj-link">GitHub</a>
+      <a href="https://drive.google.com/file/d/1YMt2jgGRc5Hm_1O9K72Zs_jiq48BCHCc/view?usp=drive_link" target="_blank" class="proj-link">Demo</a>
     </div>
+  </div>
+
+  <div class="project-card">
+    <div class="proj-num">PROJECT_02</div>
+    <div class="proj-name">OR Shield — Surgical Mask Detection</div>
+    <div class="proj-desc">Real-time computer vision app for OR access control. Custom YOLOv8n model (mAP50: 0.93) trained on 1,510 images. Flask REST API backend + React/Vite frontend with live webcam annotations, confidence scoring, audio alerts and session stats.</div>
+    <div class="proj-tech"><span>YOLOv8</span><span>Flask</span><span>React</span><span>Python</span><span>Vite</span></div>
+    <div class="proj-links">
+      <a href="https://github.com/AdibBENHLEL/Mask_No_Mask_detection_YOLO_v8" target="_blank" class="proj-link">GitHub</a>
+      <a href="https://drive.google.com/file/d/1N4MCZ-vF2qoa6uxknh07G4UW41Cu1IT3/view?usp=sharing" target="_blank" class="proj-link">Demo</a>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <div class="proj-num">PROJECT_03</div>
+    <div class="proj-name">Fraud Detection — Hadoop MapReduce</div>
+    <div class="proj-desc">Distributed fraud detection pipeline on a multi-container Hadoop cluster. MapReduce workflow in Python via Hadoop Streaming on the PaySim dataset (450MB+). Detects suspicious accounts using transaction frequency, balance anomalies and transfer patterns.</div>
+    <div class="proj-tech"><span>Hadoop</span><span>MapReduce</span><span>Python</span><span>Docker</span></div>
+    <div class="proj-links">
+      <a href="#" class="proj-link">GitHub</a>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <div class="proj-num">PROJECT_04</div>
+    <div class="proj-name">Python Turtle Maze Solver</div>
+    <div class="proj-desc">Application to generate and solve mazes using the Turtle library with pathfinding algorithms BFS, DFS, and A* — visualizing each algorithm's traversal step by step.</div>
+    <div class="proj-tech"><span>Python</span><span>Turtle</span><span>BFS</span><span>DFS</span><span>A*</span></div>
+    <div class="proj-links">
+      <a href="#" class="proj-link">GitHub</a>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <div class="proj-num">PROJECT_05</div>
+    <div class="proj-name">Mobile Stock Management App</div>
+    <div class="proj-desc">Native Android application for stock management built with Java, XML layouts, and SQLite local database. Features real-time inventory tracking and offline-first architecture.</div>
+    <div class="proj-tech"><span>Java</span><span>Android Studio</span><span>SQLite</span><span>XML</span></div>
+    <div class="proj-links">
+      <a href="#" class="proj-link">GitHub</a>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <div class="proj-num">PROJECT_06</div>
+    <div class="proj-name">CNN Image Classifier — Happy vs. Sad</div>
+    <div class="proj-desc">Convolutional neural network using TensorFlow to classify facial expressions (happy vs. sad) from image datasets, with custom training pipeline and evaluation metrics.</div>
+    <div class="proj-tech"><span>TensorFlow</span><span>CNN</span><span>Python</span><span>OpenCV</span></div>
+    <div class="proj-links">
+      <a href="#" class="proj-link">GitHub</a>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <div class="proj-num">PROJECT_07</div>
+    <div class="proj-name">Casino Game Attractiveness Analyzer</div>
+    <div class="proj-desc">Desktop app to evaluate the attractiveness of new casino card games through simulation, data visualization and statistical analysis.</div>
+    <div class="proj-tech"><span>Python</span><span>Matplotlib</span><span>Tkinter</span></div>
+    <div class="proj-links">
+      <a href="#" class="proj-link">GitHub</a>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <div class="proj-num">PROJECT_08</div>
+    <div class="proj-name">DirennaPlan — Task Manager</div>
+    <div class="proj-desc">Desktop to-do list application for task management with priority tracking, deadlines, and persistent storage built with Python and Tkinter.</div>
+    <div class="proj-tech"><span>Python</span><span>Tkinter</span></div>
+    <div class="proj-links">
+      <a href="#" class="proj-link">GitHub</a>
+    </div>
+  </div>
+
+</div>
     <div style="text-align:center;margin-top:2.5rem;">
       <a href="https://github.com/AdibBENHLEL" target="_blank" class="btn-secondary">VIEW_ALL_ON_GITHUB</a>
     </div>
