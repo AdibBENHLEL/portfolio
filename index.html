@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Adib Ben Helal — Software Engineer</title>
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600&display=swap" rel="stylesheet"/>
+
+<!-- CSS — order matters -->
+<link rel="stylesheet" href="css/style.css"/>
+<link rel="stylesheet" href="css/animations.css"/>
+<link rel="stylesheet" href="css/terminal.css"/>
+
+<!-- EmailJS -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+
+<!-- PAGE LOADER -->
+<div id="page-loader">
+  <h1 class="hero-title"><span class="cyan">Data Science Profil</span></h1>
+  <div class="loader-icons">
+    <div class="loader-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/>
+      </svg><span>ML Models</span>
+    </div>
+    <div class="loader-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4.03 3 9 3s9-1.34 9-3"/>
+      </svg><span>Big Data</span>
+    </div>
+    <div class="loader-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="3"/><path d="M12 3a9 9 0 0 1 9 9"/><path d="M3 12a9 9 0 0 1 9-9"/><path d="M12 21a9 9 0 0 1-9-9"/><path d="M21 12a9 9 0 0 1-9 9"/>
+      </svg><span>Neural Net</span>
+    </div>
+    <div class="loader-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/><path d="m12 6 2 3-2 3-2-3z" fill="currentColor" stroke="none"/>
+      </svg><span>ETL Pipeline</span>
+    </div>
+    <div class="loader-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M2 20h20M5 20V10l7-7 7 7v10"/><path d="M9 20v-5h6v5"/>
+      </svg><span>Analytics</span>
+    </div>
+    <div class="loader-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
+      </svg><span>Deep Learning</span>
+    </div>
+    <div class="loader-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2v-4M9 21H5a2 2 0 0 1-2-2v-4m0 0h18"/>
+      </svg><span>Data Viz</span>
+    </div>
+  </div>
+  <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
+  <div class="loader-label">INITIALIZING_SYSTEMS...</div>
+</div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="nav-logo">&lt;ADIB <span>/&gt;</span></div>
+  <div class="nav-links">
+    <a href="#hero" class="active">HOME</a>
+    <a href="#about">ABOUT</a>
+    <a href="#projects">PROJECTS</a>
+    <a href="#skills">SKILLS</a>
+    <a href="#resume">RESUME</a>
+    <a href="#demos">DEMOS</a>
+    <a href="#contact">CONTACT</a>
+  </div>
+  <button class="nav-theme" onclick="toggleTheme()" title="Toggle theme">☀</button>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div style="position:relative;z-index:1;padding:0 2rem;width:100%;">
+    <div class="hero-inner">
+
+      <!-- PHOTO -->
+      <div class="hero-photo-wrap">
+        <div class="hero-photo-hex">
+          <img src="assets/photo.jpg" alt="Adib Ben Helal"/>
+        </div>
+      </div>
+
+      <!-- TEXT -->
+      <div class="hero-text">
+        <div class="hero-badge" id="exe-btn" onclick="launchExe()" title="Click to run">
+          <span id="exe-label">▶ HELLO_WORLD.exe</span>
+        </div>
+        <h1 class="hero-title">
+          <span class="white">I'm </span><span class="cyan">ADIB<br>BEN HELAL</span>
+        </h1>
+        <p class="hero-sub">Software Engineer / Full-Stack Developer</p>
+        <p class="hero-desc">Building fast, modern web applications and data-driven systems.</p>
+        <div class="hero-btns">
+          <a href="#projects" class="btn-primary">VIEW_PROJECTS</a>
+          <a href="#contact" class="btn-secondary">GET_IN_TOUCH</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="hero-scroll">SCROLL</div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="sec-header">
+      <span class="sec-tag">// 01</span>
+      <h2 class="sec-title">ABOUT_ME</h2>
+      <div class="sec-line"></div>
+    </div>
+    <div class="about-grid">
+      <div class="about-terminal" onclick="document.getElementById('about-cmd').focus()">
+        <div class="term-bar">
+          <div class="term-dot r"></div><div class="term-dot y"></div><div class="term-dot g"></div>
+          <span class="term-title">adib@portfolio ~ bash</span>
+        </div>
+        <div class="term-output" id="about-output"></div>
+        <div class="term-input-row">
+          <span class="term-input-prompt">adib@portfolio:~$&nbsp;</span>
+          <input type="text" id="about-cmd" autocomplete="off" spellcheck="false" placeholder="type 'help'…"/>
+        </div>
+      </div>
+      <div class="about-text">
+        <h3>WHO AM I?</h3>
+        <p>I'm a Software Engineer based in Tunisia, passionate about building elegant solutions to complex problems. I work across the full stack — from crafting responsive UIs to designing scalable backend architectures and data pipelines.</p>
+        <p>With experience spanning web development, data engineering, AI/ML, and mobile apps, I bring versatility and a sharp attention to detail to every project I touch.</p>
+        <div class="about-stats">
+          <div class="stat-box"><div class="stat-num">40+</div><div class="stat-label">TECHNOLOGIES</div></div>
+          <div class="stat-box"><div class="stat-num">∞</div><div class="stat-label">CURIOSITY</div></div>
+          <div class="stat-box"><div class="stat-num">FS</div><div class="stat-label">FULL-STACK</div></div>
+          <div class="stat-box"><div class="stat-num">TN</div><div class="stat-label">LOCATION</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="container">
+    <div class="sec-header">
+      <span class="sec-tag">// 02</span>
+      <h2 class="sec-title">SKILLS_STACK</h2>
+      <div class="sec-line"></div>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-cat"><div class="skill-cat-title">⟩ Languages</div><div class="skill-tags"><span class="tag">C</span><span class="tag">Python</span><span class="tag">Java</span><span class="tag">JavaScript</span><span class="tag">TypeScript</span><span class="tag">PHP</span><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">SQL</span></div></div>
+      <div class="skill-cat"><div class="skill-cat-title">⟩ Frameworks & Libraries</div><div class="skill-tags"><span class="tag">React</span><span class="tag">MERN Stack</span><span class="tag">Flask</span><span class="tag">Material-UI</span><span class="tag">D3.js</span><span class="tag">Matplotlib</span><span class="tag">Tkinter</span><span class="tag">PyQt5</span><span class="tag">TensorFlow</span><span class="tag">YOLOv8</span><span class="tag">NLP</span><span class="tag">Pandas</span><span class="tag">Pytest</span></div></div>
+      <div class="skill-cat"><div class="skill-cat-title">⟩ Databases</div><div class="skill-tags"><span class="tag">MySQL</span><span class="tag">PostgreSQL</span><span class="tag">SQL Server</span><span class="tag">MinIO</span></div></div>
+      <div class="skill-cat"><div class="skill-cat-title">⟩ DevOps & Infra</div><div class="skill-tags"><span class="tag">Docker</span><span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">Apache Kafka</span><span class="tag">XAMPP</span><span class="tag">cPanel</span><span class="tag">Apache</span><span class="tag">FileZilla</span><span class="tag">VMware</span><span class="tag">VirtualBox</span></div></div>
+      <div class="skill-cat"><div class="skill-cat-title">⟩ Data Engineering</div><div class="skill-tags"><span class="tag">ETL Pipelines</span><span class="tag">Batch & Stream</span><span class="tag">Hadoop</span><span class="tag">Spark</span><span class="tag">Talend</span><span class="tag">n8n</span><span class="tag">Power Pivot</span><span class="tag">Power BI</span><span class="tag">Power Automate</span></div></div>
+      <div class="skill-cat"><div class="skill-cat-title">⟩ Tools & Platforms</div><div class="skill-tags"><span class="tag">WordPress</span><span class="tag">Odoo</span><span class="tag">Android Studio</span><span class="tag">a2hosting</span><span class="tag">Postman</span><span class="tag">Canva</span><span class="tag">CapCut</span><span class="tag">API Design</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="container">
+    <div class="sec-header">
+      <span class="sec-tag">// 03</span>
+      <h2 class="sec-title">PROJECTS</h2>
+      <div class="sec-line"></div>
+    </div>
+    <div class="projects-grid">
+      <div class="project-card"><div class="proj-num">PROJECT_01</div><div class="proj-name">AI Vision Detection</div><div class="proj-desc">Real-time object detection system using YOLOv8 with custom training pipeline and live video stream processing.</div><div class="proj-tech"><span>YOLOv8</span><span>Python</span><span>OpenCV</span><span>TensorFlow</span></div><div class="proj-links"><a href="#" class="proj-link">GitHub</a><a href="#" class="proj-link">Live Demo</a></div></div>
+      <div class="project-card"><div class="proj-num">PROJECT_02</div><div class="proj-name">Data Pipeline System</div><div class="proj-desc">End-to-end ETL pipeline with Kafka streaming, Spark batch processing, and PostgreSQL data warehouse integration.</div><div class="proj-tech"><span>Kafka</span><span>Spark</span><span>PostgreSQL</span><span>Docker</span></div><div class="proj-links"><a href="#" class="proj-link">GitHub</a></div></div>
+      <div class="project-card"><div class="proj-num">PROJECT_03</div><div class="proj-name">Full-Stack Web App</div><div class="proj-desc">Modern MERN stack application with RESTful API, JWT authentication, and responsive Material-UI frontend.</div><div class="proj-tech"><span>React</span><span>Node.js</span><span>MongoDB</span><span>Material-UI</span></div><div class="proj-links"><a href="#" class="proj-link">GitHub</a><a href="#" class="proj-link">Live Demo</a></div></div>
+      <div class="project-card"><div class="proj-num">PROJECT_04</div><div class="proj-name">NLP Text Classifier</div><div class="proj-desc">Natural language processing pipeline for text classification with custom model training and Flask API deployment.</div><div class="proj-tech"><span>Python</span><span>NLP</span><span>Flask</span><span>Pandas</span></div><div class="proj-links"><a href="#" class="proj-link">GitHub</a></div></div>
+      <div class="project-card"><div class="proj-num">PROJECT_05</div><div class="proj-name">Android Mobile App</div><div class="proj-desc">Native Android application with Java, featuring real-time database sync, push notifications, and offline-first architecture.</div><div class="proj-tech"><span>Java</span><span>Android Studio</span><span>MySQL</span></div><div class="proj-links"><a href="#" class="proj-link">GitHub</a></div></div>
+      <div class="project-card"><div class="proj-num">PROJECT_06</div><div class="proj-name">BI Dashboard</div><div class="proj-desc">Interactive BI dashboard with D3.js visualizations, Power BI integration, and automated reporting.</div><div class="proj-tech"><span>D3.js</span><span>Power BI</span><span>Python</span><span>SQL Server</span></div><div class="proj-links"><a href="#" class="proj-link">GitHub</a></div></div>
+    </div>
+    <div style="text-align:center;margin-top:2.5rem;">
+      <a href="https://github.com/AdibBENHLEL" target="_blank" class="btn-secondary">VIEW_ALL_ON_GITHUB</a>
+    </div>
+  </div>
+</section>
+
+<!-- RESUME -->
+<section id="resume">
+  <div class="container">
+    <div class="sec-header">
+      <span class="sec-tag">// 04</span>
+      <h2 class="sec-title">RESUME</h2>
+      <div class="sec-line"></div>
+    </div>
+    <div style="text-align:right;margin-bottom:2rem;">
+      <a href="assets/cv.pdf" class="btn-primary" style="font-size:0.75rem;">↓ DOWNLOAD_CV.PDF</a>
+    </div>
+    <div class="resume-layout">
+      <div class="resume-col">
+        <h3>// Experience</h3>
+        <div class="timeline">
+          <div class="tl-item"><div class="tl-date">2024 — PRESENT</div><div class="tl-role">Software Engineer</div><div class="tl-place">Company Name · Tunis, TN</div><div class="tl-desc">Full-stack development, API design, and data pipeline engineering.</div></div>
+          <div class="tl-item"><div class="tl-date">2023 — 2024</div><div class="tl-role">Full-Stack Developer Intern</div><div class="tl-place">Company Name · Tunis, TN</div><div class="tl-desc">Built web applications with React & Flask. Integrated third-party APIs.</div></div>
+          <div class="tl-item"><div class="tl-date">2022 — 2023</div><div class="tl-role">Data Engineering Intern</div><div class="tl-place">Company Name · Tunis, TN</div><div class="tl-desc">Designed ETL pipelines with Talend and Spark. Built Power BI dashboards.</div></div>
+        </div>
+      </div>
+      <div class="resume-col">
+        <h3>// Education</h3>
+        <div class="timeline">
+          <div class="tl-item"><div class="tl-date">2020 — 2024</div><div class="tl-role">Engineering Degree</div><div class="tl-place">University Name · Tunis, TN</div><div class="tl-desc">Software Engineering. Focus on distributed systems, AI/ML, and web technologies.</div></div>
+          <div class="tl-item"><div class="tl-date">2017 — 2020</div><div class="tl-role">Baccalauréat — Mathematics</div><div class="tl-place">High School Name · Tunisia</div><div class="tl-desc">Graduated with distinction.</div></div>
+        </div>
+        <h3 style="margin-top:2rem;">// Certifications</h3>
+        <div class="timeline">
+          <div class="tl-item"><div class="tl-date">2024</div><div class="tl-role">Add your certifications here</div><div class="tl-place">Issuing Org</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEMOS -->
+<section id="demos">
+  <div class="container">
+    <div class="sec-header">
+      <span class="sec-tag">// 03.5</span>
+      <h2 class="sec-title">DEMO_VIDEOS</h2>
+      <div class="sec-line"></div>
+    </div>
+    <div class="demo-list">
+      <div class="demo-item">
+        <div class="demo-meta"><span class="demo-num">DEMO_01</span><span class="demo-title">AI Vision Detection — Live Demo</span></div>
+        <p class="demo-desc">// Real-time YOLOv8 object detection on live video stream</p>
+        <div class="demo-tags"><span>YOLOv8</span><span>Python</span><span>OpenCV</span></div>
+        <div class="demo-video-wrap"><iframe src="https://drive.google.com/file/d/11FLb4k_qOEDEgmugj7ynWSiexszHF-It/preview" allow="autoplay" allowfullscreen></iframe></div>
+      </div>
+      <div class="demo-divider"></div>
+      <div class="demo-item">
+        <div class="demo-meta"><span class="demo-num">DEMO_02</span><span class="demo-title">Data Pipeline — Live Demo</span></div>
+        <p class="demo-desc">// Kafka streaming + Spark batch processing in action</p>
+        <div class="demo-tags"><span>Kafka</span><span>Spark</span><span>Docker</span></div>
+        <div class="demo-video-wrap"><iframe src="https://drive.google.com/file/d/1FahCeHA8x_k0jd6i0TVPjqQwWZUAqkE8/preview" allow="autoplay" allowfullscreen></iframe></div>
+      </div>
+      <div class="demo-divider"></div>
+      <div class="demo-item">
+        <div class="demo-meta"><span class="demo-num">DEMO_03</span><span class="demo-title">Full-Stack App — Live Demo</span></div>
+        <p class="demo-desc">// MERN stack app walkthrough with JWT auth flow</p>
+        <div class="demo-tags"><span>React</span><span>Node.js</span><span>MongoDB</span></div>
+        <div class="demo-video-wrap"><iframe src="https://drive.google.com/file/d/1ZEtoLr5TDHwof0xPpjg-GVC_yzNJ8SZf/preview" allow="autoplay" allowfullscreen></iframe></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="sec-header">
+      <span class="sec-tag">// 05</span>
+      <h2 class="sec-title">CONTACT</h2>
+      <div class="sec-line"></div>
+    </div>
+    <div class="contact-layout">
+      <div>
+        <div class="contact-info">
+          <h3>Let's work together.</h3>
+          <p>Open to freelance, full-time, and collaboration opportunities.</p>
+        </div>
+        <div class="contact-links">
+          <a href="mailto:adibbenhlel30@gmail.com" class="contact-link"><span class="contact-link-icon">@</span><span class="contact-link-text">adibbenhlel30@gmail.com</span></a>
+          <a href="https://github.com/AdibBENHLEL" target="_blank" class="contact-link"><span class="contact-link-icon">{}</span><span class="contact-link-text">github.com/AdibBENHLEL</span></a>
+          <a href="https://linkedin.com/in/adib" target="_blank" class="contact-link"><span class="contact-link-icon">in</span><span class="contact-link-text">linkedin.com/in/adib</span></a>
+          <a href="#" class="contact-link"><span class="contact-link-icon">📍</span><span class="contact-link-text">Tunis, Tunisia</span></a>
+        </div>
+      </div>
+      <div>
+        <div class="contact-terminal">
+          <div class="term-bar">
+            <div class="term-dot r"></div><div class="term-dot y"></div><div class="term-dot g"></div>
+            <span class="term-title">send_message.sh</span>
+          </div>
+          <div class="cmd-form">
+            <div class="cmd-field"><label class="cmd-label">// YOUR_NAME</label><input class="cmd-input" type="text" placeholder="John Doe" id="f-name"/></div>
+            <div class="cmd-field"><label class="cmd-label">// YOUR_EMAIL</label><input class="cmd-input" type="email" placeholder="john@example.com" id="f-email"/></div>
+            <div class="cmd-field"><label class="cmd-label">// MESSAGE</label><textarea class="cmd-input" placeholder="Hello Adib, I'd like to..." id="f-msg"></textarea></div>
+            <button class="cmd-submit">SEND_MESSAGE →</button>
+            <div class="form-msg" id="form-msg"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&lt;ADIB BEN HELAL /&gt; &nbsp;·&nbsp; Built with HTML, CSS & JS &nbsp;·&nbsp; <span id="yr"></span></p>
+</footer>
+
+<!-- CMD BAR -->
+<div id="cmdbar">
+  <span class="cmd-bar-prompt">visitor@adib:~$</span>
+  <input type="text" id="cmd-input" placeholder="type 'help' for commands..." autocomplete="off" spellcheck="false"/>
+  <span class="cmd-hint">↑↓ history · TAB complete</span>
+</div>
+<div id="cmd-output"></div>
+
+<!-- JS — order matters: data first, then logic -->
+<script src="js/data.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/terminal.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>

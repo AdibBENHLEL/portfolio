@@ -1,0 +1,84 @@
+/* ══════════════════════════════════════
+   terminal.css — all terminal components
+   ══════════════════════════════════════ */
+
+/* ── PAGE LOADER ── */
+#page-loader {
+  position:fixed; inset:0; z-index:9999;
+  background:var(--bg);
+  display:flex; flex-direction:column;
+  align-items:center; justify-content:center; gap:3.5rem;
+  transition:opacity 0.6s ease, visibility 0.6s ease;
+}
+#page-loader.hidden { opacity:0; visibility:hidden; pointer-events:none; }
+.loader-icons { display:flex; gap:3.5rem; flex-wrap:wrap; justify-content:center; max-width:1400px; }
+.loader-icon { display:flex; flex-direction:column; align-items:center; gap:1rem; }
+.loader-icon svg { width:96px; height:96px; stroke:var(--cyan); filter:drop-shadow(0 0 14px var(--cyan)); }
+.loader-icon span { font-family:var(--font-mono); font-size:0.85rem; color:var(--text-dim); letter-spacing:3px; text-transform:uppercase; }
+.loader-bar-wrap { width:520px; height:4px; background:var(--border); position:relative; overflow:hidden; }
+.loader-bar { height:100%; width:0%; background:var(--cyan); box-shadow:0 0 18px var(--cyan); }
+.loader-label { font-family:var(--font-mono); font-size:1.1rem; color:var(--cyan); letter-spacing:5px; animation:blink 1s step-end infinite; }
+
+/* ── EXE BUTTON ── */
+#exe-btn { cursor:pointer; user-select:none; transition:all 0.15s; letter-spacing:3px; }
+#exe-btn:hover { background:var(--cyan); color:var(--bg); box-shadow:0 0 20px rgba(0,229,255,0.4); transform:scale(1.04); }
+#exe-btn.running { cursor:default; }
+
+/* ── ABOUT TERMINAL ── */
+.about-terminal {
+  background:var(--bg3); border:1px solid var(--border);
+  font-family:var(--font-mono); font-size:0.82rem;
+  display:flex; flex-direction:column; height:510px;
+}
+.term-bar { display:flex; align-items:center; gap:8px; padding:10px 16px; background:rgba(0,229,255,0.08); border-bottom:1px solid var(--border); flex-shrink:0; }
+.term-dot { width:10px; height:10px; border-radius:50%; }
+.term-dot.r { background:#ff5f57; }
+.term-dot.y { background:#febc2e; }
+.term-dot.g { background:#28c840; }
+.term-title { font-size:0.7rem; color:var(--text-dim); margin-left:auto; letter-spacing:1px; }
+
+/* scrollable output */
+.term-output { padding:1rem 1.2rem 0.5rem; flex:1; overflow-y:auto; line-height:1.9; }
+.term-output::-webkit-scrollbar { width:3px; }
+.term-output::-webkit-scrollbar-thumb { background:var(--blue-dim); }
+
+/* output line types */
+.t-line { display:flex; gap:0.5rem; flex-wrap:wrap; }
+.t-prompt { color:var(--cyan); white-space:nowrap; flex-shrink:0; }
+.t-cmd    { color:var(--title); }
+.t-out    { color:var(--text-dim); padding-left:1rem; display:block; }
+.t-out.hi  { color:var(--cyan); }
+.t-out.ok  { color:#28c840; }
+.t-out.err { color:#ff5f57; }
+
+/* boot sequence line types */
+.term-line           { display:block; white-space:pre-wrap; }
+.term-line.dim       { color:var(--text-dim); }
+.term-line.ok        { color:#28c840; }
+.term-line.cyan      { color:var(--cyan); }
+.term-line.white     { color:#ffffff; }
+.term-line.warn      { color:#febc2e; }
+.term-line.err       { color:#ff5f57; }
+.term-line.prompt::before { content:'adib@portfolio:~$ '; color:var(--cyan); }
+
+/* input row */
+.term-input-row { display:flex; align-items:center; gap:0.5rem; padding:0.6rem 1.2rem 0.8rem; border-top:1px solid var(--border); flex-shrink:0; }
+.term-input-prompt { color:var(--cyan); white-space:nowrap; font-size:0.82rem; }
+#about-cmd { flex:1; background:transparent; border:none; outline:none; font-family:var(--font-mono); font-size:0.82rem; color:var(--title); caret-color:var(--cyan); }
+
+/* cursor */
+.cursor { display:inline-block; width:8px; height:14px; background:var(--cyan); vertical-align:middle; }
+
+/* ── BOTTOM CMD BAR ── */
+#cmdbar { position:fixed; bottom:0; left:0; right:0; z-index:200; background:rgba(5,10,18,0.97); border-top:1px solid var(--border); padding:0 2rem; display:flex; align-items:center; gap:1rem; height:44px; }
+.cmd-bar-prompt { font-family:var(--font-mono); font-size:0.8rem; color:var(--cyan); white-space:nowrap; }
+#cmd-input { flex:1; background:transparent; border:none; outline:none; font-family:var(--font-mono); font-size:0.8rem; color:var(--title); caret-color:var(--cyan); }
+.cmd-hint { font-family:var(--font-mono); font-size:0.65rem; color:var(--text-dim); white-space:nowrap; }
+#cmd-output { position:fixed; bottom:44px; left:0; right:0; z-index:199; background:rgba(5,10,18,0.97); border-top:1px solid var(--border); font-family:var(--font-mono); font-size:0.8rem; color:var(--text); padding:1rem 2rem; display:none; max-height:40vh; overflow-y:auto; white-space:pre-wrap; }
+.cmd-out-line      { margin-bottom:2px; }
+.cmd-out-line.c    { color:var(--cyan); }
+.cmd-out-line.w    { color:#fff; }
+.cmd-out-line.d    { color:var(--text-dim); }
+
+/* ── CONTACT TERMINAL FORM ── */
+.contact-terminal .term-bar { background:rgba(0,229,255,0.08); }

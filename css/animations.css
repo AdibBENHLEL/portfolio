@@ -1,0 +1,74 @@
+/* ══════════════════════════════════════
+   animations.css — all @keyframes
+   ══════════════════════════════════════ */
+
+/* Hero badge border blink */
+@keyframes blink-border {
+  0%,100% { border-color: var(--cyan); }
+  50%      { border-color: var(--blue-dim); }
+}
+.hero-badge { animation: blink-border 2s infinite; }
+
+/* Shine sweep on name */
+@keyframes shine-sweep {
+  0%   { background-position: 200% center; }
+  100% { background-position: -200% center; }
+}
+.hero-title .cyan { animation: shine-sweep 2.5s linear infinite; }
+
+/* Scroll indicator */
+@keyframes float {
+  0%,100% { transform: translateX(-50%) translateY(0); }
+  50%      { transform: translateX(-50%) translateY(-6px); }
+}
+.hero-scroll { animation: float 2s ease-in-out infinite; }
+
+/* Cursor blink */
+@keyframes blink {
+  0%,100% { opacity:1; }
+  50%      { opacity:0; }
+}
+.cursor { animation: blink 1s infinite; }
+
+/* Hexagon glow */
+@keyframes hex-glow {
+  0%   { filter: drop-shadow(0 0 8px var(--cyan)) drop-shadow(0 0 20px var(--cyan)); }
+  100% { filter: drop-shadow(0 0 18px var(--cyan)) drop-shadow(0 0 45px var(--cyan)); }
+}
+.hero-photo-hex { animation: hex-glow 2s ease-in-out infinite alternate; }
+
+/* EXE button pulse */
+@keyframes exe-pulse {
+  from { box-shadow: 0 0 8px rgba(0,229,255,0.3); }
+  to   { box-shadow: 0 0 24px rgba(0,229,255,0.8); }
+}
+#exe-btn.running { animation: exe-pulse 0.4s ease-in-out infinite alternate; }
+
+/* Page loader */
+@keyframes icon-burst {
+  0%   { opacity:0; transform: translateY(30px) scale(0.6); }
+  60%  { opacity:1; transform: translateY(-6px) scale(1.1); }
+  100% { opacity:1; transform: translateY(0) scale(1); }
+}
+@keyframes load-progress {
+  0%   { width:0%; }
+  100% { width:100%; }
+}
+.loader-bar { animation: load-progress 1.8s ease forwards; }
+
+/* Demo scan line */
+@keyframes scan-line {
+  0%   { transform: translateY(-100%); }
+  100% { transform: translateY(100vh); }
+}
+.demo-video-wrap::before { animation: scan-line 3s linear infinite; }
+
+/* Loader icons staggered */
+.loader-icon { opacity:0; transform:translateY(30px); animation: icon-burst 0.5s ease forwards; }
+.loader-icon:nth-child(1){ animation-delay:0.00s; }
+.loader-icon:nth-child(2){ animation-delay:0.15s; }
+.loader-icon:nth-child(3){ animation-delay:0.30s; }
+.loader-icon:nth-child(4){ animation-delay:0.45s; }
+.loader-icon:nth-child(5){ animation-delay:0.60s; }
+.loader-icon:nth-child(6){ animation-delay:0.75s; }
+.loader-icon:nth-child(7){ animation-delay:0.90s; }
